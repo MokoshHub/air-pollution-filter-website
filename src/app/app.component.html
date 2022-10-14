@@ -1,0 +1,391 @@
+<div class="max-w-screen min-h-screen text-black">
+  <div class="bg-gradient-to-b from-amber-300 to-transparent" routerLink="/">
+      <div class="text-center">M O K O S H</div>
+      <div class="text-center text-xl pb-3">Digitalni filter zagađenja vazduha</div>    
+  </div>
+
+  <div class="text-center justify-center items-center">
+      
+    <router-outlet></router-outlet>
+      
+      <!-- Button trigger modal -->
+    <button type="button" class="bg-gray-400 hover:bg-gray-500 text-[#212322] font-bold m-2 py-2 px-4 rounded-full transition-color duration-500" data-toggle="modal" data-target="#exampleModal">
+      <i class="fa fa-info"></i>
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Informacije o slici</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="text-base leading-relaxed text-gray-900">
+              Vaše slike će kod nas biti sačuvane samo tokom obrađivanja, nakon čega će biti obrisane.
+              Predlažemo da sliku preuzmete koristeći dugme "Preuzmi sliku" 
+              ili sačuvate screenshot kako biste bili sigurni da je sačuvana.<br>
+              Pomeranjem slajdera na slici možete videti Vašu sliku pre i posle filtera.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-2xl mx-auto bg-white p-8 rounded mb-5">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button relative flex items-center 
+            px-5 py-3 w-full font-medium text-left rounded-t transition-color duration-500
+            divide-y text-black bg-white-100 ring-0 focus:ring-0 focus:bg-gray-200
+            collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <span>Šta je zagađenje vazduha?</span>
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <div class="p-2 border border-gray-200 border-b-0">
+                <p class="m-3 text-black text-justify">
+                    Zagađenje vazduha podrazumeva hemikalije, čestice i biološke materije koji ugrožavaju životnu sredinu i samim tim sva živa bića, uključujući i ljude. <br>
+                    Svrha ove vebsajt aplikacije jeste da približi količinu zagađenosti u vazduhu vizuelizacijom sa kojom smo svi upoznati i na način koji nam je opipljiv (smog, prašina, dim) - zagađenost inače nedivljivih štetnih materija. <br><br>
+
+                    Zagađujuće materije uključuju sumpor dioksid (SO<sub>2</sub>), azot-dioksid (NO<sub>2</sub>), suspendovane čestice (PM<sub>10</sub> i PM<sub>2.5</sub>), ozon (O<sub>3</sub>), ugljen-monoksid (CO), olovo (Pb) i benzen (C<sub>6</sub>H<sub>6</sub>). <br>
+                    Kako bi se predstavila koncentracija ovih štetnih materija u vazduhu i njihov uticaj na sveopšte stanje živih bića uveden je indeks kvaliteta vazduha (AQI) čije referentne vrednosti možete videti u tabelama ispod za čestice (PM<sub>10</sub> i PM<sub>2.5</sub>) koje su izmerene senzorima sa kojih se prikupljaju podaci. <br>
+                </p>
+              </div>                
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button relative flex items-center justify-between 
+            px-5 py-3 w-full font-medium text-left rounded-t transition-color duration-500
+            divide-y text-black bg-white-100 ring-0 focus:ring-0 focus:bg-gray-200
+            collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <span>PM<sub>2.5</sub> AQI tabela</span>
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <div class="overflow-x-auto border border-gray-200 border-b-0">
+                <div class="flex flex-col">
+                  <div class="sm:-mx-6 lg:-mx-8">
+                    <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                      <div class="overflow-x-auto">
+                        <table class="min-w-full">
+                          <thead class="border-b">
+                            <tr>
+                              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
+                                  PM<sub>2.5</sub>
+                              </th>
+                              <th scope="col" colspan="2" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
+                                  Koncentracija (μg/m<sup>3</sup>)
+                              </th>
+                              <th scope="col" colspan="2" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
+                                AQI
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="bg-gray-100 border-b">
+                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                  Kvalitet vazduha
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                donja<br>granica
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                gornja<br>granica
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                donja<br>granica
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                gornja<br>granica
+                              </td>
+                            </tr>
+                            <tr class="bg-[#3EBD11] border-b">
+                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dobar</td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                0
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                12
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                0
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                50
+                              </td>
+                            </tr>
+                            <tr class="bg-[#E3DC33] border-b">
+                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Umeren</td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                12.1
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                35.4
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                51
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                100
+                              </td>
+                            </tr>
+                            <tr class="bg-[#E08111] border-b">
+                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nezdrav za osetljive grupe</td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                35.5
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                55.4
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                101
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                150
+                              </td>
+                            </tr>
+                            <tr class="bg-[#D10000] border-b">
+                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nezdrav za sve</td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                55.5
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                150.4
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                151
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                200
+                              </td>
+                            </tr>
+                            <tr class="bg-[#761586] border-b">
+                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Vrlo nezdrav</td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                150.5
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                250.4
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                201
+                              </td>
+                              <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                300
+                              </td>
+                            </tr>
+                            <tr class="bg-[#4e0000] border-b">
+                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300">Opasan</td>
+                              <td class="text-sm text-gray-300 font-light px-6 py-4 whitespace-nowrap border-l">
+                                250.5
+                              </td>
+                              <td class="text-sm text-gray-300 font-light px-6 py-4 whitespace-nowrap border-r">
+                                500.4
+                              </td>
+                              <td class="text-sm text-gray-300 font-light px-6 py-4 whitespace-nowrap border-l">
+                                301
+                              </td>
+                              <td class="text-sm text-gray-300 font-light px-6 py-4 whitespace-nowrap border-r">
+                                500
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>                
+              </div>
+          </div>
+        </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button relative flex items-center justify-between 
+            px-5 py-3 w-full font-medium text-left rounded-t transition-color duration-500
+            divide-y text-black bg-white-100 ring-0 focus:ring-0 focus:bg-gray-200
+            collapsed" 
+            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            <span>PM<sub>10</sub> AQI tabela</span>
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <div class="overflow-x-auto border border-gray-200 border-b-0">
+                <div class="flex flex-col">
+                    <div class="sm:-mx-6 lg:-mx-8">
+                      <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                        <div class="overflow-x-auto">
+                          <table class="min-w-full">
+                            <thead class="border-b">
+                              <tr>
+                                <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
+                                    PM<sub>10</sub>
+                                </th>
+                                <th scope="col" colspan="2" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
+                                    Koncentracija (μg/m<sup>3</sup>)
+                                </th>
+                                <th scope="col" colspan="2" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
+                                  AQI
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="bg-gray-100 border-b">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                    Kvalitet vazduha
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                  donja<br>granica
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                  gornja<br>granica
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                  donja<br>granica
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                  gornja<br>granica
+                                </td>
+                              </tr>
+                              <tr class="bg-[#3EBD11] border-b">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dobar</td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                  0
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                  54
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                  0
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                  50
+                                </td>
+                              </tr>
+                              <tr class="bg-[#E3DC33] border-b">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Umeren</td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                  55
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                  154
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                  51
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                  100
+                                </td>
+                              </tr>
+                              <tr class="bg-[#E08111] border-b">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nezdrav za osetljive grupe</td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                  155
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                  254
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                  101
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                  150
+                                </td>
+                              </tr>
+                              <tr class="bg-[#D10000] border-b">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nezdrav za sve</td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                  255
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                  354
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                  151
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                  200
+                                </td>
+                              </tr>
+                              <tr class="bg-[#761586] border-b">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Vrlo nezdrav</td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                  355
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                  424
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
+                                  201
+                                </td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
+                                  300
+                                </td>
+                              </tr>
+                              <tr class="bg-[#4e0000] border-b">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300">Opasan</td>
+                                <td class="text-sm text-gray-300 font-light px-6 py-4 whitespace-nowrap border-l">
+                                  425
+                                </td>
+                                <td class="text-sm text-gray-300 font-light px-6 py-4 whitespace-nowrap border-r">
+                                  604
+                                </td>
+                                <td class="text-sm text-gray-300 font-light px-6 py-4 whitespace-nowrap border-l">
+                                  301
+                                </td>
+                                <td class="text-sm text-gray-300 font-light px-6 py-4 whitespace-nowrap border-r">
+                                  500
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFour">
+            <button class="accordion-button relative flex items-center justify-between 
+            px-5 py-3 w-full font-medium text-left rounded-t transition-color duration-500
+            divide-y text-black bg-white-100 ring-0 focus:ring-0 focus:bg-gray-200
+            collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              <span>Informacije o sajtu</span>
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <div class="p-2 border border-gray-200 border-b-0">
+                <div class="m-3 text-black text-justify">
+                    Za korišćenje veb aplikacije neophodno je da dozvolite pristup lokaciji i kameri sajtu, kao i da vam lokacija bude uključena tokom korišćenja. 
+                    Podaci o lokaciji, slike koje filtrirate, niti bilo kakvi lični podaci nigde neće biti sačuvani, već će se koristiti samo za pronalaženje najbližeg senzora vašoj lokaciji i obrađivanje slike. 
+                    Podaci o zagađenosti vazduha su preuzeti sa <a class="text-blue-700" href="https://sensor.community/en/">Sensor Community</a> sajta koji mere PM<sub>2.5</sub> i PM<sub>10</sub> čestice, dok su opšti podaci o zagađenosti vazduha 
+                    preuzeti sa sajta <a class="text-blue-700" href="http://www.sepa.gov.rs/">Agencije za zaštitu životne sredine, Ministarstva zaštite životne sredine Republike Srbije</a>.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .accordion-button:after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000000'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+  }
+</style>
