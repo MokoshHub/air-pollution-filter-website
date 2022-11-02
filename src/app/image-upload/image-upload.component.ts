@@ -95,7 +95,7 @@ export class ImageUploadComponent {
                 if (error.status == 418) {
                   window.alert("Nismo pronašli senzor blizu vaše lokacije!");
                 } else {
-                  window.alert("Došlo je do greške sa naše strane! Molimo vas da pokušate ponovo!");
+                  window.alert("Došlo je do greške sa naše strane! Molimo vas da osvežite stranicu i pokušate ponovo!");
                 }
                 
                 ImageUploadComponent.message = '';

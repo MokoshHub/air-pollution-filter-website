@@ -1,7 +1,7 @@
-<div class="max-w-screen min-h-screen text-black">
-  <div class="bg-gradient-to-b from-amber-300 to-transparent" routerLink="/">
-      <div class="text-center">M O K O S H</div>
-      <div class="text-center text-xl pb-3">Digitalni filter zagađenja vazduha</div>    
+<div class="max-w-screen min-h-screen text-[#AC9157]">
+  <div class="" routerLink="/">
+      <div class="text-center text-xl pt-2">M O K O S H</div>
+      <div class="text-center text-2xl pb-3">Digitalni filter zagađenja vazduha</div>    
   </div>
 
   <div class="text-center justify-center items-center">
@@ -9,7 +9,7 @@
     <router-outlet></router-outlet>
       
       <!-- Button trigger modal -->
-    <button type="button" class="bg-gray-400 hover:bg-gray-500 text-[#212322] font-bold m-2 py-2 px-4 rounded-full transition-color duration-500" data-toggle="modal" data-target="#exampleModal">
+    <button type="button" class="w-7 bg-[#9C9A9B] text-[#43433D] rounded-full transition-color duration-500" data-toggle="modal" data-target="#exampleModal">
       <i class="fa fa-info"></i>
     </button>
 
@@ -17,10 +17,10 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Informacije o slici</h5>
+          <div class="modal-header bg-[#9F6747]">
+            <h5 class="modal-title text-gray-900" id="exampleModalLabel">Informacije o slici</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              <svg aria-hidden="true" class="w-5 h-5" fill="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
           </div>
           <div class="modal-body">
@@ -35,43 +35,64 @@
       </div>
     </div>
 
-    <div class="max-w-2xl mx-auto bg-white p-8 rounded mb-5">
+    <div class="max-w-2xl mx-auto bg-[#AC9157] p-8 rounded mb-5">
       <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
+        <div class="accordion-item bg-[#AC9157]">
           <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button relative flex items-center 
-            px-5 py-3 w-full font-medium text-left rounded-t transition-color duration-500
-            divide-y text-black bg-white-100 ring-0 focus:ring-0 focus:bg-gray-200
-            collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <button class="relative flex items-center bg-[#9F6747] 
+            px-5 py-3 w-full font-medium text-left transition-color duration-500
+            divide-y text-black collapsed rounded-t-xl accordion-button border-transparent focus:border-transparent focus:ring-0"
+            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
               <span>Šta je zagađenje vazduha?</span>
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-              <div class="p-2 border border-gray-200 border-b-0">
-                <p class="m-3 text-black text-justify">
-                    Zagađenje vazduha podrazumeva hemikalije, čestice i biološke materije koji ugrožavaju životnu sredinu i samim tim sva živa bića, uključujući i ljude. <br>
-                    Svrha ove vebsajt aplikacije jeste da približi količinu zagađenosti u vazduhu vizuelizacijom sa kojom smo svi upoznati i na način koji nam je opipljiv (smog, prašina, dim) - zagađenost inače nedivljivih štetnih materija. <br><br>
-
-                    Zagađujuće materije uključuju sumpor dioksid (SO<sub>2</sub>), azot-dioksid (NO<sub>2</sub>), suspendovane čestice (PM<sub>10</sub> i PM<sub>2.5</sub>), ozon (O<sub>3</sub>), ugljen-monoksid (CO), olovo (Pb) i benzen (C<sub>6</sub>H<sub>6</sub>). <br>
-                    Kako bi se predstavila koncentracija ovih štetnih materija u vazduhu i njihov uticaj na sveopšte stanje živih bića uveden je indeks kvaliteta vazduha (AQI) čije referentne vrednosti možete videti u tabelama ispod za čestice (PM<sub>10</sub> i PM<sub>2.5</sub>) koje su izmerene senzorima sa kojih se prikupljaju podaci. <br>
+            <div class="accordion-body bg-[#AC9157]">
+              <div class="p-2 border border-[#799F98] bg-[#F8F8F7] border-b-0">
+                <p class="m-3 text-gray-900 text-justify">
+                    Zagađenje vazduha podrazumeva hemikalije, čestice i biološke materije koji ugrožavaju životnu sredinu i samim tim sva živa bića, uključujući i ljude.
+                    Svrha ove veb aplikacije jeste da približi količinu zagađenosti u vazduhu vizuelizacijom sa kojom smo svi upoznati i na način koji nam je opipljiv (smog, prašina, dim) - zagađenost inače nedivljivih štetnih materija. <br><br>
+                    Zagađujuće materije uključuju sumpor dioksid (SO<sub>2</sub>), azot-dioksid (NO<sub>2</sub>), suspendovane čestice (PM<sub>10</sub> i PM<sub>2.5</sub>), ozon (O<sub>3</sub>), ugljen-monoksid (CO), olovo (Pb) i benzen (C<sub>6</sub>H<sub>6</sub>).
+                    Kako bi se predstavila koncentracija ovih štetnih materija u vazduhu i njihov uticaj na sveopšte stanje živih bića uveden je indeks kvaliteta vazduha (AQI) čije referentne vrednosti možete videti u tabelama ispod za čestice (PM<sub>2.5</sub> i PM<sub>10</sub>) koje su izmerene senzorima sa kojih se prikupljaju podaci.
                 </p>
               </div>                
             </div>
           </div>
         </div>
-        <div class="accordion-item">
+        <div class="accordion-item bg-[#AC9157]">
           <h2 class="accordion-header" id="flush-headingTwo">
-            <button class="accordion-button relative flex items-center justify-between 
-            px-5 py-3 w-full font-medium text-left rounded-t transition-color duration-500
-            divide-y text-black bg-white-100 ring-0 focus:ring-0 focus:bg-gray-200
-            collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              <span>PM<sub>2.5</sub> AQI tabela</span>
+            <button class="relative flex items-center bg-[#9F6747] 
+            px-5 py-3 w-full font-medium text-left transition-color duration-500
+            divide-y text-black collapsed accordion-button border-transparent focus:border-transparent focus:ring-0"
+            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <span>Suspendovane čestice</span>
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-              <div class="overflow-x-auto border border-gray-200 border-b-0">
+            <div class="accordion-body bg-[#AC9157]">
+              <div class="p-2 border border-[#799F98] bg-[#F8F8F7] border-b-0">
+                <p class="m-3 text-black text-justify">
+                    PM<sub>2.5</sub> čestice imaju prečnik manji od 2,5 mikrometara, što je oko 3% debljine ljudske dlake.
+                    One, kao i PM<sub>10</sub> čestice koje su prečnika 10 mikrometara, definisane su po veličini ali mogu biti sačinjene od stotinu različitih hemikalija.
+                    Za više informacija o različitim izvorima ovih čestica i njihov uticaj na zdravlje pogledajte <a class="text-blue-700" href="https://www.epa.gov/pm-pollution/particulate-matter-pm-basics">ovde</a>.
+                    <img src="static/assets/pm25_comparison.jpg">
+                </p>
+              </div>                
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-[#AC9157]">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="relative flex items-center bg-[#9F6747] 
+            px-5 py-3 w-full font-medium text-left transition-color duration-500
+            divide-y text-black collapsed accordion-button border-transparent focus:border-transparent focus:ring-0"
+            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              <span>PM<sub>2.5</sub> AQI tabela</span>
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body bg-[#AC9157]">
+              <div class="overflow-x-auto border border-[#799F98] bg-[#F8F8F7] border-b-0">
                 <div class="flex flex-col">
                   <div class="sm:-mx-6 lg:-mx-8">
                     <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
@@ -208,19 +229,18 @@
           </div>
         </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingThree">
-            <button class="accordion-button relative flex items-center justify-between 
-            px-5 py-3 w-full font-medium text-left rounded-t transition-color duration-500
-            divide-y text-black bg-white-100 ring-0 focus:ring-0 focus:bg-gray-200
-            collapsed" 
-            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        <div class="accordion-item bg-[#AC9157]">
+          <h2 class="accordion-header" id="flush-headingFour">
+            <button class="relative flex items-center bg-[#9F6747] 
+            px-5 py-3 w-full font-medium text-left transition-color duration-500
+            divide-y text-black collapsed accordion-button border-transparent focus:border-transparent focus:ring-0"
+            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
             <span>PM<sub>10</sub> AQI tabela</span>
             </button>
           </h2>
-          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-              <div class="overflow-x-auto border border-gray-200 border-b-0">
+          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body bg-[#AC9157]">
+              <div class="overflow-x-auto border border-[#799F98] bg-[#F8F8F7] border-b-0">
                 <div class="flex flex-col">
                     <div class="sm:-mx-6 lg:-mx-8">
                       <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
@@ -357,18 +377,18 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingFour">
-            <button class="accordion-button relative flex items-center justify-between 
-            px-5 py-3 w-full font-medium text-left rounded-t transition-color duration-500
-            divide-y text-black bg-white-100 ring-0 focus:ring-0 focus:bg-gray-200
-            collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+        <div class="accordion-item bg-[#AC9157]">
+          <h2 class="accordion-header" id="flush-headingFive">
+            <button class="relative flex items-center bg-[#9F6747] 
+            px-5 py-3 w-full font-medium text-left transition-color duration-500
+            divide-y text-black collapsed rounded-b-xl accordion-button border-transparent focus:border-transparent focus:ring-0"
+            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
               <span>Informacije o sajtu</span>
             </button>
           </h2>
-          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-              <div class="p-2 border border-gray-200 border-b-0">
+          <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body bg-[#AC9157]">
+              <div class="p-2 border border-[#799F98] bg-[#F8F8F7] border-b-0">
                 <div class="m-3 text-black text-justify">
                     Za korišćenje veb aplikacije neophodno je da dozvolite pristup lokaciji i kameri sajtu, kao i da vam lokacija bude uključena tokom korišćenja. 
                     Podaci o lokaciji, slike koje filtrirate, niti bilo kakvi lični podaci nigde neće biti sačuvani, već će se koristiti samo za pronalaženje najbližeg senzora vašoj lokaciji i obrađivanje slike. 

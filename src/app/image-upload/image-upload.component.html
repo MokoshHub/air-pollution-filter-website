@@ -1,4 +1,4 @@
-<div *ngIf="getMessage" class="text-[#C4B6B6] m-2 font-bold">
+<div *ngIf="getMessage" class=" m-2 font-bold">
 	<div *ngIf="getMessage == 'Filtriramo sliku...'; else showMessage">
 		<div class="text-center" role="status">
 			<svg class="inline mr-2 w-8 h-8 text-gray-200 animate-spin fill-zinc-500" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,7 +14,7 @@
 </div>
 
 <input type="file" [disabled]="!located || uploading" id="photo" hidden accept="image/png, image/jpeg" capture="camera" #photoSource (change)="onUpload(photoSource)"/>		
-<label for="photo" class="bg-amber-300 hover:bg-amber-400 text-[#212322] text-xl font-bold m-2 py-2 px-4 rounded-full w-40 transition-color duration-500" 
+<label for="photo" class="m-2 py-2 bg-[#AC9157] text-[#43433D] hover:text-[#43433D] hover:bg-[#9F6747] text-xl font-bold rounded-full w-40 transition-color duration-500" 
 	[ngClass]="!located || uploading ? 'opacity-50' : 'opacity-100'"
 	>Slikaj</label>
 	
