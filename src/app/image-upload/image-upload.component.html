@@ -14,8 +14,8 @@
 </div>
 
 <input type="file" [disabled]="!located || uploading" id="photo" hidden accept="image/png, image/jpeg" capture="camera" #photoSource (change)="onUpload(photoSource)"/>		
-<label for="photo" class="m-2 py-2 bg-button text-light-text hover:text-dark-text hover:bg-button-hover text-xl font-bold rounded-full w-40 transition-color duration-500" 
-	[ngClass]="!located || uploading ? 'opacity-25 hover:text-light-text hover:bg-button' : 'opacity-100'"
+<label for="photo" class="m-2 py-2 bg-button text-light-text text-xl font-bold rounded-full w-40 transition-color duration-500" 
+	[ngClass]="!located || uploading ? 'opacity-25 hover:text-light-text hover:bg-button' : 'opacity-100 hover:text-dark-text hover:bg-button-hover'"
 	>Slikaj</label>
 	
 <!-- <div>
