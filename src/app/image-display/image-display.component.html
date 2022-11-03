@@ -17,4 +17,4 @@
     </div>
 </ng-template>
 
-<button [disabled]="isImageLoading" [ngClass]="isImageLoading ? 'opacity-25 hover:text-light-text hover:bg-button' : 'opacity-100'" class="transition-color duration-500 text-xl bg-button text-light-text hover:text-dark-text hover:bg-button-hover font-bold m-2 py-2 px-4 rounded-full" (click)="downloadImage(image)">Preuzmi sliku</button>
+<button [disabled]="isImageLoading" [ngClass]="isImageLoading ? 'opacity-25 hover:text-light-text hover:bg-button' : 'opacity-100 hover:text-button hover:bg-light-text'" class="m-2 my-4 py-2 bg-button font-sans text-light-text text-xl rounded-full w-40 transition-color duration-500" (click)="downloadImage(image)">Preuzmi sliku</button>
