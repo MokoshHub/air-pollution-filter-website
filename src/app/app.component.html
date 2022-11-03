@@ -1,7 +1,7 @@
 <div class="max-w-screen min-h-screen text-light-text">
   <div routerLink="/">
-    <div class="text-center text-xl pt-2">M O K O S H</div>
-    <div class="text-center text-2xl pb-3">Digitalni filter zagađenja vazduha</div> 
+    <div class="text-center text-3xl pt-2 mb-4">M&nbsp; O&nbsp; K&nbsp; O&nbsp; S&nbsp; H</div>
+    <div class="text-center text-3xl">Digitalni filter zagađenja vazduha</div> 
   </div>
 
   <div class="text-center justify-center items-center">
@@ -9,7 +9,7 @@
     <router-outlet></router-outlet>
       
     <!-- Button trigger modal -->
-    <button type="button" class="w-7 bg-footer rounded-full transition-color duration-500" data-toggle="modal" data-target="#exampleModal">
+    <button type="button" class="w-7 bg-footer text-panel-buttons-gradient-l rounded-full transition-color duration-500" data-toggle="modal" data-target="#exampleModal">
       <i class="fa fa-info"></i>
     </button>
 
@@ -35,11 +35,11 @@
       </div>
     </div>
 
-    <div class="max-w-2xl mx-auto p-8 rounded mb-5 bg-panel-background">
+    <div class="max-w-2xl mx-auto p-8 rounded mb-5 bg-panel-background/10 backdrop-blur">
       <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item bg-panel-background">
+        <div class="accordion-item bg-panel-background/10">
           <h2 class="accordion-header" id="flush-headingOne">
-            <button class="relative flex items-center bg-panel-buttons text-light-text
+            <button class="relative flex items-center bg-gradient-to-r from-panel-buttons-gradient-l via-panel-buttons-gradient-mid to-panel-buttons-gradient-2 text-light-text
             px-5 py-3 w-full font-medium text-left transition-color duration-500
             divide-y collapsed rounded-t-xl"
             type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -47,21 +47,22 @@
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse bg-text-color" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body bg-panel-background text-dark-text">
+            <div class="accordion-body bg-panel-background/10 text-dark-text">
               <div class="p-2 bg-gray-100">
                 <p class="m-3 text-justify">
                     Zagađenje vazduha podrazumeva hemikalije, čestice i biološke materije koji ugrožavaju životnu sredinu i samim tim sva živa bića, uključujući i ljude.
                     Svrha ove veb aplikacije jeste da približi količinu zagađenosti u vazduhu vizuelizacijom sa kojom smo svi upoznati i na način koji nam je opipljiv (smog, prašina, dim) - zagađenost inače nedivljivih štetnih materija. <br><br>
                     Zagađujuće materije uključuju sumpor dioksid (SO<sub>2</sub>), azot-dioksid (NO<sub>2</sub>), suspendovane čestice (PM<sub>10</sub> i PM<sub>2.5</sub>), ozon (O<sub>3</sub>), ugljen-monoksid (CO), olovo (Pb) i benzen (C<sub>6</sub>H<sub>6</sub>).
-                    Kako bi se predstavila koncentracija ovih štetnih materija u vazduhu i njihov uticaj na sveopšte stanje živih bića uveden je indeks kvaliteta vazduha (AQI) čije referentne vrednosti možete videti u tabelama ispod za čestice (PM<sub>2.5</sub> i PM<sub>10</sub>) koje su izmerene senzorima sa kojih se prikupljaju podaci.
+                    Kako bi se predstavila koncentracija ovih štetnih materija u vazduhu i njihov uticaj na sveopšte stanje živih bića uveden je indeks kvaliteta vazduha (AQI) čije referentne vrednosti možete videti u tabelama ispod za čestice (PM<sub>2.5</sub> i PM<sub>10</sub>) koje su izmerene senzorima sa kojih se prikupljaju podaci.<br><br>
+                    Trenutno je u toku online peticija "Rešenje za zagađenje" koju možete potpisati na <a class="text-blue-700" href="https://peticije.kreni-promeni.org/petitions/trazimo-resenje-za-zagadenje-1">ovom linku</a>!
                 </p>
               </div>                
             </div>
           </div>
         </div>
-        <div class="accordion-item bg-panel-background">
+        <div class="accordion-item bg-panel-background/10">
           <h2 class="accordion-header" id="flush-headingTwo">
-            <button class="relative flex items-center bg-panel-buttons text-light-text
+            <button class="relative flex items-center bg-gradient-to-r from-panel-buttons-gradient-l via-panel-buttons-gradient-mid to-panel-buttons-gradient-2 text-light-text
             px-5 py-3 w-full font-medium text-left transition-color duration-500
             divide-y collapsed"
             type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
@@ -69,7 +70,7 @@
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body bg-panel-background text-dark-text">
+            <div class="accordion-body bg-panel-background/10 text-dark-text">
               <div class="p-2 bg-gray-100">
                 <p class="m-3 text-justify">
                     PM<sub>2.5</sub> čestice imaju prečnik manji od 2,5 mikrometara, što je oko 3% debljine ljudske dlake.
@@ -81,9 +82,9 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item bg-panel-background">
+        <div class="accordion-item bg-panel-background/10">
           <h2 class="accordion-header" id="flush-headingThree">
-            <button class="relative flex items-center bg-panel-buttons text-light-text
+            <button class="relative flex items-center bg-gradient-to-r from-panel-buttons-gradient-l via-panel-buttons-gradient-mid to-panel-buttons-gradient-2 text-light-text
             px-5 py-3 w-full font-medium text-left transition-color duration-500
             divide-y collapsed"
             type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
@@ -229,9 +230,9 @@
           </div>
         </div>
         </div>
-        <div class="accordion-item bg-panel-background">
+        <div class="accordion-item bg-panel-background/10">
           <h2 class="accordion-header" id="flush-headingFour">
-            <button class="relative flex items-center bg-panel-buttons text-light-text
+            <button class="relative flex items-center bg-gradient-to-r from-panel-buttons-gradient-l via-panel-buttons-gradient-mid to-panel-buttons-gradient-2 text-light-text
             px-5 py-3 w-full font-medium text-left transition-color duration-500
             divide-y collapsed"
             type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
@@ -377,9 +378,9 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item bg-panel-background">
+        <div class="accordion-item bg-panel-background/10">
           <h2 class="accordion-header" id="flush-headingFive">
-            <button class="relative flex items-center bg-panel-buttons text-light-text
+            <button class="relative flex items-center bg-gradient-to-r from-panel-buttons-gradient-l via-panel-buttons-gradient-mid to-panel-buttons-gradient-2 text-light-text
             px-5 py-3 w-full font-medium text-left transition-color duration-500
             divide-y collapsed rounded-b-xl"
             type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
@@ -387,7 +388,7 @@
             </button>
           </h2>
           <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body bg-panel-background text-dark-text">
+            <div class="accordion-body bg-panel-background/10 text-dark-text">
               <div class="p-2 bg-gray-100">
                 <div class="m-3 text-justify">
                     Za korišćenje veb aplikacije neophodno je da dozvolite pristup lokaciji i kameri sajtu, kao i da vam lokacija bude uključena tokom korišćenja. 

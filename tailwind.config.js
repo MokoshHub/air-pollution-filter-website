@@ -9,18 +9,21 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'sans': ['Roboto', 'sans-serif'],
+      'sans': ['Roboto', 'sans-serif']
     },
     colors: {
-      'background': '#445687',
+      'background': '#405673',
       'light-text': '#eeeeee',
       'dark-text': '#111111',
       'panel-background': '#eeeeee',
       'content-background': '#DEE3F1',
       'panel-buttons': '#4F5D2F',
-      'button': '#F1B810',
+      'panel-buttons-gradient-l': '#405673',
+      'panel-buttons-gradient-mid': '#6093BF',
+      'panel-buttons-gradient-2': '#F2E2CE', 
+      'button': '#A6836F',
       'button-hover': '#7a28cb',
-      'footer': '#7a28cb'
+      'footer': '#F2E2CE'
     },
     extend: {},
   }
