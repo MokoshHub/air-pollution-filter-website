@@ -12,15 +12,15 @@ module.exports = {
       'sans': ['Roboto', 'sans-serif'],
     },
     colors: {
-      'background': '#423629',
-      'light-text': '#DEE3F1',
-      'dark-text': '#423629',
-      'panel-background': '#7D7E75',
+      'background': '#445687',
+      'light-text': '#eeeeee',
+      'dark-text': '#111111',
+      'panel-background': '#eeeeee',
       'content-background': '#DEE3F1',
       'panel-buttons': '#4F5D2F',
-      'button': '#4F5D2F',
-      'button-hover': '#7D7E75',
-      'footer': '#7D7E75'
+      'button': '#F1B810',
+      'button-hover': '#7a28cb',
+      'footer': '#7a28cb'
     },
     extend: {},
   }
