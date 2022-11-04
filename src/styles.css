@@ -3,5 +3,5 @@
 @import 'tailwindcss/utilities';
 @font-face {
     font-family: Roboto;
-    src: url(src\static\assets\Roboto-Light.ttf);
+    src: url('/static/assets/Roboto-Light.ttf');
 }

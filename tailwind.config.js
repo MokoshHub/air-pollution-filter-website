@@ -25,6 +25,10 @@ module.exports = {
       'button-hover': '#7a28cb',
       'footer': '#F2E2CE'
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'sky': "url('/static/assets/beautiful-cloudy-sky-free-photo.jpg')",
+      }
+    },
   }
 }
