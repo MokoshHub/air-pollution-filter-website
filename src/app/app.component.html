@@ -34,7 +34,7 @@
               Informacije o slici
             </h5>
             <h5 *ngIf="getLanguage == 'en'" class="modal-title" id="exampleModalLabel">
-              <!-- ENGLISH -->
+              Image information
             </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <svg aria-hidden="true" class="w-5 h-5" fill="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -48,7 +48,10 @@
               Pomeranjem slajdera na slici možete videti Vašu sliku pre i posle filtera.
             </p>
             <p *ngIf="getLanguage == 'en'" class="text-base leading-relaxed">
-              <!-- ENGLISH -->
+              Your images are on our server only during processing, after which they are deleted.
+              We suggest you download your image using the "Download image" button
+              or take a screenshot in order to make sure you have the image saved.
+              Moving the slider left or right over the image shows the before and after the filter has been applied.
             </p>
           </div>
         </div>
@@ -76,14 +79,18 @@
             <div class="accordion-body bg-panel-background/10 text-dark-text">
               <div class="p-2 bg-gray-100">
                 <p *ngIf="getLanguage == 'rs'" class="m-3 text-justify">
-                    Zagađenje vazduha podrazumeva hemikalije, čestice i biološke materije koji ugrožavaju životnu sredinu i samim tim sva živa bića, uključujući i ljude.
-                    Svrha ove veb aplikacije jeste da približi količinu zagađenosti u vazduhu vizuelizacijom sa kojom smo svi upoznati i na način koji nam je opipljiv (smog, prašina, dim) - zagađenost inače nedivljivih štetnih materija. <br><br>
-                    Zagađujuće materije uključuju sumpor dioksid (SO<sub>2</sub>), azot-dioksid (NO<sub>2</sub>), suspendovane čestice (PM<sub>10</sub> i PM<sub>2.5</sub>), ozon (O<sub>3</sub>), ugljen-monoksid (CO), olovo (Pb) i benzen (C<sub>6</sub>H<sub>6</sub>).
-                    Kako bi se predstavila koncentracija ovih štetnih materija u vazduhu i njihov uticaj na sveopšte stanje živih bića uveden je indeks kvaliteta vazduha (AQI) čije referentne vrednosti možete videti u tabelama ispod za čestice (PM<sub>2.5</sub> i PM<sub>10</sub>) koje su izmerene senzorima sa kojih se prikupljaju podaci.<br><br>
-                    <b>Trenutno je u toku online peticija "Rešenje za zagađenje" koju možete potpisati na <a class="text-blue-700" href="https://peticije.kreni-promeni.org/petitions/trazimo-resenje-za-zagadenje-1"><i>ovom linku </i></a>!</b>
-                </p>
+                  Zagađenje vazduha podrazumeva hemikalije, čestice i biološke materije koji ugrožavaju životnu sredinu i samim tim sva živa bića, uključujući i ljude.
+                  Svrha ove veb aplikacije jeste da približi količinu zagađenosti u vazduhu vizuelizacijom sa kojom smo svi upoznati i na način koji nam je opipljiv (smog, prašina, dim) - zagađenost inače nedivljivih štetnih materija. <br><br>
+                  Zagađujuće materije uključuju sumpor dioksid (SO<sub>2</sub>), azot-dioksid (NO<sub>2</sub>), suspendovane čestice (PM<sub>10</sub> i PM<sub>2.5</sub>), ozon (O<sub>3</sub>), ugljen-monoksid (CO), olovo (Pb) i benzen (C<sub>6</sub>H<sub>6</sub>).
+                  Kako bi se predstavila koncentracija ovih štetnih materija u vazduhu i njihov uticaj na sveopšte stanje živih bića uveden je indeks kvaliteta vazduha (AQI) čije referentne vrednosti možete videti u tabelama ispod za čestice (PM<sub>2.5</sub> i PM<sub>10</sub>) koje su izmerene senzorima sa kojih se prikupljaju podaci.<br><br>
+                  <b>Trenutno je u toku online peticija "Rešenje za zagađenje" koju možete potpisati na <a class="text-blue-700" href="https://peticije.kreni-promeni.org/petitions/trazimo-resenje-za-zagadenje-1"><i>ovom linku </i></a>!</b>
+                  </p>
                 <p *ngIf="getLanguage == 'en'" class="m-3 text-justify">
-                    <!-- ENGLISH -->
+                  Air pollution includes (but is not limited to) chemicals, particles and biological substances that endanger the environment and therefore all living things, including humans.
+                  The purpose of this web application is to approximate the amount of pollution in the air by means of visualization which is easy to understand and in a way that is tangible to us (smog, dust, smoke) - the effects of otherwise invisible harmful substances. <br><br>
+                  Pollutants include sulfur dioxide (SO<sub>2</sub>), nitrogen dioxide (NO<sub>2</sub>), suspended particles (PM<sub>10</sub> and PM<sub>2.5 </sub>), ozone (O<sub>3</sub>), carbon monoxide (CO), lead (Pb) and benzene (C<sub>6</sub>H<sub>6</sub>).
+                  In order to present the concentration of these harmful substances in the air and their impact on the overall condition of living beings, the air quality index (AQI) was introduced, the reference values ​​of which can be seen in the tables below for particles (PM<sub>2.5</sub> and PM<sub >10</sub>) which were measured by the sensors from which data is collected.<br><br>
+                  <b>An online petition "Rešenje za zagađenje" ("Solution for pollution") is currently underway - you can sign it at <a class="text-blue-700" href="https://peticije.kreni-promeni.org/petitions/trazimo-resenje- for-pollution-1"><i>this link </i></a>!</b>
                 </p>
               </div>                
             </div>
@@ -114,7 +121,10 @@
                     <img src="static/assets/pm25_comparison.jpg">
                 </p>
                 <p *ngIf="getLanguage == 'en'" class="m-3 text-justify">
-                  <!-- ENGLISH -->
+                  PM<sub>2.5</sub> particles have a diameter of less than 2.5 micrometers, which is about 3% of the thickness of a human hair.
+                  They, like PM<sub>10</sub> particles, which are 10 micrometers in diameter, are defined by size but can be made up of hundreds of different chemicals.
+                  For more information on the different sources of these particles and their health effects, see <a class="text-blue-700" href="https://www.epa.gov/pm-pollution/particulate-matter-pm-basics" >here</a>.
+                  <img src="static/assets/pm25_comparison.jpg">
                 </p>
               </div>                
             </div>
@@ -156,6 +166,7 @@
                                   </span>
                                   <span *ngIf="getLanguage == 'en'">
                                     <!-- ENGLISH -->
+                                    Concentration (μg/m<sup>3</sup>)
                                   </span>
                               </th>
                               <th scope="col" colspan="2" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
@@ -171,6 +182,7 @@
                                 </span>
                                 <span *ngIf="getLanguage == 'en'">
                                   <!-- ENGLISH -->
+                                  Air quality
                                 </span>
                               </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
@@ -179,6 +191,7 @@
                                 </span>
                                 <span *ngIf="getLanguage == 'en'">
                                   <!-- ENGLISH -->
+                                  lower bound
                                 </span>
                               </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
@@ -187,6 +200,7 @@
                                 </span>
                                 <span *ngIf="getLanguage == 'en'">
                                   <!-- ENGLISH -->
+                                  upper bound
                                 </span>
                               </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
@@ -195,6 +209,7 @@
                                 </span>
                                 <span *ngIf="getLanguage == 'en'">
                                   <!-- ENGLISH -->
+                                  lower bound
                                 </span>
                               </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
@@ -203,6 +218,7 @@
                                 </span>
                                 <span *ngIf="getLanguage == 'en'">
                                   <!-- ENGLISH -->
+                                  upper bound
                                 </span>
                               </td>
                             </tr>
@@ -213,6 +229,7 @@
                                 </span>
                                 <span *ngIf="getLanguage == 'en'">
                                   <!-- ENGLISH -->
+                                  Good
                                 </span>
                               </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
@@ -235,6 +252,7 @@
                                 </span>
                                 <span *ngIf="getLanguage == 'en'">
                                   <!-- ENGLISH -->
+                                  Moderate
                                 </span>
                               </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
@@ -257,6 +275,7 @@
                                 </span>
                                 <span *ngIf="getLanguage == 'en'">
                                   <!-- ENGLISH -->
+                                  Unhealthy for sensitive groups
                                 </span>
                               </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
@@ -279,6 +298,7 @@
                                 </span>
                                 <span *ngIf="getLanguage == 'en'">
                                   <!-- ENGLISH -->
+                                  Unhealthy for all
                                 </span>  
                               </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
@@ -301,6 +321,7 @@
                                 </span>
                                 <span *ngIf="getLanguage == 'en'">
                                   <!-- ENGLISH -->
+                                  Very unhealthy
                                 </span>
                               </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
@@ -385,6 +406,7 @@
                                   </span>
                                   <span *ngIf="getLanguage == 'en'">
                                     <!-- ENGLISH -->
+                                    Concentration (μg/m<sup>3</sup>)
                                   </span>
                               </th>
                               <th scope="col" colspan="2" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
@@ -400,6 +422,7 @@
                                   </span>
                                   <span *ngIf="getLanguage == 'en'">
                                     <!-- ENGLISH -->
+                                    Air quality
                                   </span>
                                 </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
@@ -408,6 +431,7 @@
                                   </span>
                                   <span *ngIf="getLanguage == 'en'">
                                     <!-- ENGLISH -->
+                                    lower bound
                                   </span>
                                 </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
@@ -416,6 +440,7 @@
                                   </span>
                                   <span *ngIf="getLanguage == 'en'">
                                     <!-- ENGLISH -->
+                                    upper bound
                                   </span>
                                 </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
@@ -424,6 +449,7 @@
                                   </span>
                                   <span *ngIf="getLanguage == 'en'">
                                     <!-- ENGLISH -->
+                                    lower bound
                                   </span>
                                 </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
@@ -432,6 +458,7 @@
                                   </span>
                                   <span *ngIf="getLanguage == 'en'">
                                     <!-- ENGLISH -->
+                                    upper bound
                                   </span>
                                 </td>
                               </tr>
@@ -442,6 +469,7 @@
                                   </span>
                                   <span *ngIf="getLanguage == 'en'">
                                     <!-- ENGLISH -->
+                                    Good
                                   </span>
                                 </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
@@ -464,6 +492,7 @@
                                   </span>
                                   <span *ngIf="getLanguage == 'en'">
                                     <!-- ENGLISH -->
+                                    Moderate
                                   </span>
                                 </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
@@ -486,6 +515,7 @@
                                   </span>
                                   <span *ngIf="getLanguage == 'en'">
                                     <!-- ENGLISH -->
+                                    Unhealthy for sensitive groups
                                   </span>
                                 </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
@@ -508,6 +538,7 @@
                                   </span>
                                   <span *ngIf="getLanguage == 'en'">
                                     <!-- ENGLISH -->
+                                    Unhealthy for all
                                   </span>  
                                 </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
@@ -530,6 +561,7 @@
                                   </span>
                                   <span *ngIf="getLanguage == 'en'">
                                     <!-- ENGLISH -->
+                                    Very unhealthy
                                   </span>
                                 </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
@@ -597,10 +629,16 @@
             <div class="accordion-body bg-panel-background/10 text-dark-text">
               <div class="p-2 bg-gray-100">
                 <div *ngIf="getLanguage == 'rs'" class="m-3 text-justify">
-                    Za korišćenje veb aplikacije neophodno je da dozvolite pristup lokaciji i kameri sajtu, kao i da vam lokacija bude uključena tokom korišćenja. 
-                    Podaci o lokaciji, slike koje filtrirate, niti bilo kakvi lični podaci nigde neće biti sačuvani, već će se koristiti samo za pronalaženje najbližeg senzora vašoj lokaciji i obrađivanje slike. 
-                    Podaci o zagađenosti vazduha su preuzeti sa <a class="text-blue-700" href="https://sensor.community/en/">Sensor Community</a> sajta koji mere PM<sub>2.5</sub> i PM<sub>10</sub> čestice, dok su opšti podaci o zagađenosti vazduha 
-                    preuzeti sa sajta <a class="text-blue-700" href="http://www.sepa.gov.rs/">Agencije za zaštitu životne sredine, Ministarstva zaštite životne sredine Republike Srbije</a>.
+                  Za korišćenje veb aplikacije neophodno je da dozvolite pristup lokaciji i kameri sajtu, kao i da vam lokacija bude uključena tokom korišćenja. 
+                  Podaci o lokaciji, slike koje filtrirate, niti bilo kakvi lični podaci nigde neće biti sačuvani, već će se koristiti samo za pronalaženje najbližeg senzora vašoj lokaciji i obrađivanje slike. 
+                  Podaci o zagađenosti vazduha su preuzeti sa <a class="text-blue-700" href="https://sensor.community/en/">Sensor Community</a> sajta koji mere PM<sub>2.5</sub> i PM<sub>10</sub> čestice, dok su opšti podaci o zagađenosti vazduha 
+                  preuzeti sa sajta <a class="text-blue-700" href="http://www.sepa.gov.rs/">Agencije za zaštitu životne sredine, Ministarstva zaštite životne sredine Republike Srbije</a>.
+                </div>
+                <div *ngIf="getLanguage == 'en'" class="m-3 text-justify">
+                  To use the web application, it is necessary that you allow the website access to your device's location and camera, as well as that your location is turned on during use.
+                  The location data, the images you filter, or any personal data are not stored anywhere, and are only used to find the closest sensor to your location and process the image.
+                  Air pollution data is pulled from the <a class="text-blue-700" href="https://sensor.community/en/">Sensor Community</a> service which measures PM<sub>2.5</sub> i PM<sub>10</sub> particles, while
+                  general data on air pollution were taken from the website of <a class="text-blue-700" href="http://www.sepa.gov.rs/">the Environmental Protection Agency, Ministry of Environmental Protection of the Republic of Serbia</a>.
                 </div>
               </div>
             </div>
