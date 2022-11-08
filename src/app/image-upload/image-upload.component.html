@@ -1,4 +1,4 @@
-<div *ngIf="getMessage" class=" m-2">
+<div *ngIf="getMessage" class="m-2">
 	<div *ngIf="getMessage == 'Filtriramo sliku...'; else showMessage">
 		<div class="text-center" role="status">
 			<svg class="inline mr-2 w-8 h-8 text-light-text animate-spin fill-dark-text" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -9,15 +9,24 @@
 		</div>
 	</div>
 	<ng-template #showMessage>
-		{{getMessage}}
+		<span [innerHTML]="locationErrorRS" *ngIf="getLanguage == 'rs'"></span>
+		<span [innerHTML]="locationErrorEN" *ngIf="getLanguage == 'en'"></span>
 	</ng-template>
 </div>
 
-<input type="file" [disabled]="!located || uploading" id="photo" hidden accept="image/png, image/jpeg" capture="camera" #photoSource (change)="onUpload(photoSource)"/>		
-<label for="photo" class="m-2 my-4 py-2 bg-button font-sans text-light-text text-xl rounded-full w-40 transition-color duration-500" 
-	[ngClass]="!located || uploading ? 'opacity-25 hover:text-light-text hover:bg-button' : 'opacity-100 hover:text-button hover:bg-light-text'"
-	>SLIKAJ</label>
-	
+<div>
+	<input type="file" [disabled]="!located || uploading" id="photo" hidden accept="image/png, image/jpeg" capture="camera" #photoSource (change)="onUpload(photoSource)"/>		
+	<label for="photo" class="m-2 my-2 py-2 bg-button font-sans text-light-text text-xl rounded-full w-40 transition-color duration-500" 
+	[ngClass]="!located || uploading ? 'opacity-25 hover:text-light-text hover:bg-button' : 'opacity-100 hover:text-button hover:bg-light-text'">
+		<span *ngIf="getLanguage == 'rs'">
+			SLIKAJ
+		</span>
+		<span *ngIf="getLanguage == 'en'">
+			TAKE PHOTO
+		</span>
+	</label>
+</div>
+
 <!-- <div>
 	<img class="mx-auto lg:w-1/2 md:w-full" [src]="getImageUrl">
 </div> -->

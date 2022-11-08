@@ -1,16 +1,28 @@
 <div class="max-w-screen min-h-screen pt-3">
   <div>
     <div class="text-center text-3xl pt-2 mb-4 text-dark-text">M&nbsp; O&nbsp; K&nbsp; O&nbsp; S&nbsp; H</div>
-    <div routerLink="/" class="text-center text-3xl max-w-2xl mx-auto p-8 rounded bg-panel-background/20 backdrop-blur text-dark-text font-thin">Digitalni filter zagađenja vazduha</div> 
+    <div routerLink="/" class="text-center text-3xl max-w-2xl mx-auto p-8 rounded bg-panel-background/20 backdrop-blur text-dark-text font-thin">
+      <span *ngIf="getLanguage == 'rs'">Digitalni filter zagađenja vazduha</span>
+      <span *ngIf="getLanguage == 'en'">Digital Air Pollution Filter</span>
+    </div> 
   </div>
 
   <div class="text-center justify-center items-center">
       
     <router-outlet></router-outlet>
-      
+
     <!-- Button trigger modal -->
     <button type="button" class="w-7 bg-footer text-panel-buttons-gradient-l rounded-full transition-color duration-500" data-toggle="modal" data-target="#exampleModal">
       <i class="fa fa-info"></i>
+    </button>
+    
+    <button type="button" (click)="changeLanguage()" class="m-2 w-10 bg-footer text-panel-buttons-gradient-l rounded-full transition-color duration-500">
+      <span *ngIf="getLanguage == 'rs'">
+        EN
+      </span>
+      <span *ngIf="getLanguage == 'en'">
+        RS
+      </span>
     </button>
 
     <!-- Modal -->
@@ -18,17 +30,25 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Informacije o slici</h5>
+            <h5 *ngIf="getLanguage == 'rs'" class="modal-title" id="exampleModalLabel">
+              Informacije o slici
+            </h5>
+            <h5 *ngIf="getLanguage == 'en'" class="modal-title" id="exampleModalLabel">
+              <!-- ENGLISH -->
+            </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <svg aria-hidden="true" class="w-5 h-5" fill="" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
             </button>
           </div>
           <div class="modal-body">
-            <p class="text-base leading-relaxed">
+            <p *ngIf="getLanguage == 'rs'" class="text-base leading-relaxed">
               Vaše slike će kod nas biti sačuvane samo tokom obrađivanja, nakon čega će biti obrisane.
               Predlažemo da sliku preuzmete koristeći dugme "Preuzmi sliku" 
               ili sačuvate screenshot kako biste bili sigurni da je sačuvana.<br>
               Pomeranjem slajdera na slici možete videti Vašu sliku pre i posle filtera.
+            </p>
+            <p *ngIf="getLanguage == 'en'" class="text-base leading-relaxed">
+              <!-- ENGLISH -->
             </p>
           </div>
         </div>
@@ -43,18 +63,27 @@
             px-5 py-3 w-full font-medium text-left transition-color duration-500
             divide-y collapsed rounded-t-xl"
             type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              <span>Šta je zagađenje vazduha?</span>
+              <span *ngIf="getLanguage == 'rs'">
+                Šta je zagađenje vazduha?
+              </span>
+              <span *ngIf="getLanguage == 'en'">
+                <!-- ENGLISH -->
+                What is air pollution?
+              </span>
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse bg-text-color" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body bg-panel-background/10 text-dark-text">
               <div class="p-2 bg-gray-100">
-                <p class="m-3 text-justify">
+                <p *ngIf="getLanguage == 'rs'" class="m-3 text-justify">
                     Zagađenje vazduha podrazumeva hemikalije, čestice i biološke materije koji ugrožavaju životnu sredinu i samim tim sva živa bića, uključujući i ljude.
                     Svrha ove veb aplikacije jeste da približi količinu zagađenosti u vazduhu vizuelizacijom sa kojom smo svi upoznati i na način koji nam je opipljiv (smog, prašina, dim) - zagađenost inače nedivljivih štetnih materija. <br><br>
                     Zagađujuće materije uključuju sumpor dioksid (SO<sub>2</sub>), azot-dioksid (NO<sub>2</sub>), suspendovane čestice (PM<sub>10</sub> i PM<sub>2.5</sub>), ozon (O<sub>3</sub>), ugljen-monoksid (CO), olovo (Pb) i benzen (C<sub>6</sub>H<sub>6</sub>).
                     Kako bi se predstavila koncentracija ovih štetnih materija u vazduhu i njihov uticaj na sveopšte stanje živih bića uveden je indeks kvaliteta vazduha (AQI) čije referentne vrednosti možete videti u tabelama ispod za čestice (PM<sub>2.5</sub> i PM<sub>10</sub>) koje su izmerene senzorima sa kojih se prikupljaju podaci.<br><br>
                     <b>Trenutno je u toku online peticija "Rešenje za zagađenje" koju možete potpisati na <a class="text-blue-700" href="https://peticije.kreni-promeni.org/petitions/trazimo-resenje-za-zagadenje-1"><i>ovom linku </i></a>!</b>
+                </p>
+                <p *ngIf="getLanguage == 'en'" class="m-3 text-justify">
+                    <!-- ENGLISH -->
                 </p>
               </div>                
             </div>
@@ -66,17 +95,26 @@
             px-5 py-3 w-full font-medium text-left transition-color duration-500
             divide-y collapsed"
             type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              <span>Suspendovane čestice</span>
+              <span *ngIf="getLanguage == 'rs'">
+                Suspendovane čestice
+              </span>
+              <span *ngIf="getLanguage == 'en'">
+                <!-- ENGLISH -->
+                Particulate Matter
+              </span>
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body bg-panel-background/10 text-dark-text">
               <div class="p-2 bg-gray-100">
-                <p class="m-3 text-justify">
+                <p *ngIf="getLanguage == 'rs'" class="m-3 text-justify">
                     PM<sub>2.5</sub> čestice imaju prečnik manji od 2,5 mikrometara, što je oko 3% debljine ljudske dlake.
                     One, kao i PM<sub>10</sub> čestice koje su prečnika 10 mikrometara, definisane su po veličini ali mogu biti sačinjene od stotinu različitih hemikalija.
                     Za više informacija o različitim izvorima ovih čestica i njihov uticaj na zdravlje pogledajte <a class="text-blue-700" href="https://www.epa.gov/pm-pollution/particulate-matter-pm-basics">ovde</a>.
                     <img src="static/assets/pm25_comparison.jpg">
+                </p>
+                <p *ngIf="getLanguage == 'en'" class="m-3 text-justify">
+                  <!-- ENGLISH -->
                 </p>
               </div>                
             </div>
@@ -88,7 +126,13 @@
             px-5 py-3 w-full font-medium text-left transition-color duration-500
             divide-y collapsed"
             type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              <span>PM<sub>2.5</sub> AQI tabela</span>
+              <span *ngIf="getLanguage == 'rs'">
+                PM<sub>2.5</sub> AQI tabela
+              </span>
+              <span *ngIf="getLanguage == 'en'">
+                <!-- ENGLISH -->
+                PM<sub>2.5</sub> AQI table
+              </span>
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
@@ -102,10 +146,17 @@
                           <thead class="border-b">
                             <tr>
                               <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
-                                  PM<sub>2.5</sub>
+                                  <span>
+                                    PM<sub>2.5</sub>
+                                  </span>
                               </th>
                               <th scope="col" colspan="2" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
-                                  Koncentracija (μg/m<sup>3</sup>)
+                                  <span *ngIf="getLanguage == 'rs'">
+                                    Koncentracija (μg/m<sup>3</sup>)
+                                  </span>
+                                  <span *ngIf="getLanguage == 'en'">
+                                    <!-- ENGLISH -->
+                                  </span>
                               </th>
                               <th scope="col" colspan="2" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
                                 AQI
@@ -115,23 +166,55 @@
                           <tbody>
                             <tr class="bg-gray-100 border-b">
                               <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                <span *ngIf="getLanguage == 'rs'">
                                   Kvalitet vazduha
+                                </span>
+                                <span *ngIf="getLanguage == 'en'">
+                                  <!-- ENGLISH -->
+                                </span>
                               </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
-                                donja<br>granica
+                                <span *ngIf="getLanguage == 'rs'">
+                                  donja granica
+                                </span>
+                                <span *ngIf="getLanguage == 'en'">
+                                  <!-- ENGLISH -->
+                                </span>
                               </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
-                                gornja<br>granica
+                                <span *ngIf="getLanguage == 'rs'">
+                                  gornja granica
+                                </span>
+                                <span *ngIf="getLanguage == 'en'">
+                                  <!-- ENGLISH -->
+                                </span>
                               </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
-                                donja<br>granica
+                                <span *ngIf="getLanguage == 'rs'">
+                                  donja granica
+                                </span>
+                                <span *ngIf="getLanguage == 'en'">
+                                  <!-- ENGLISH -->
+                                </span>
                               </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
-                                gornja<br>granica
+                                <span *ngIf="getLanguage == 'rs'">
+                                  gornja granica
+                                </span>
+                                <span *ngIf="getLanguage == 'en'">
+                                  <!-- ENGLISH -->
+                                </span>
                               </td>
                             </tr>
                             <tr class="bg-[#3EBD11] border-b">
-                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dobar</td>
+                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                <span *ngIf="getLanguage == 'rs'">
+                                  Dobar
+                                </span>
+                                <span *ngIf="getLanguage == 'en'">
+                                  <!-- ENGLISH -->
+                                </span>
+                              </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
                                 0
                               </td>
@@ -146,7 +229,14 @@
                               </td>
                             </tr>
                             <tr class="bg-[#E3DC33] border-b">
-                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Umeren</td>
+                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                <span *ngIf="getLanguage == 'rs'">
+                                  Umeren
+                                </span>
+                                <span *ngIf="getLanguage == 'en'">
+                                  <!-- ENGLISH -->
+                                </span>
+                              </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
                                 12.1
                               </td>
@@ -161,7 +251,14 @@
                               </td>
                             </tr>
                             <tr class="bg-[#E08111] border-b">
-                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nezdrav za osetljive grupe</td>
+                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                <span *ngIf="getLanguage == 'rs'">
+                                  Nezdrav za osetljive grupe
+                                </span>
+                                <span *ngIf="getLanguage == 'en'">
+                                  <!-- ENGLISH -->
+                                </span>
+                              </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
                                 35.5
                               </td>
@@ -176,7 +273,14 @@
                               </td>
                             </tr>
                             <tr class="bg-[#D10000] border-b">
-                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nezdrav za sve</td>
+                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                <span *ngIf="getLanguage == 'rs'">
+                                  Nezdrav za sve
+                                </span>
+                                <span *ngIf="getLanguage == 'en'">
+                                  <!-- ENGLISH -->
+                                </span>  
+                              </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
                                 55.5
                               </td>
@@ -191,7 +295,14 @@
                               </td>
                             </tr>
                             <tr class="bg-[#761586] border-b">
-                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Vrlo nezdrav</td>
+                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                <span *ngIf="getLanguage == 'rs'">
+                                  Vrlo nezdrav
+                                </span>
+                                <span *ngIf="getLanguage == 'en'">
+                                  <!-- ENGLISH -->
+                                </span>
+                              </td>
                               <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
                                 150.5
                               </td>
@@ -206,7 +317,15 @@
                               </td>
                             </tr>
                             <tr class="bg-[#4e0000] border-b">
-                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300">Opasan</td>
+                              <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300">
+                                <span *ngIf="getLanguage == 'rs'">
+                                  Opasan
+                                </span>
+                                <span *ngIf="getLanguage == 'en'">
+                                  <!-- ENGLISH -->
+                                  Hazardous
+                                </span>
+                              </td>
                               <td class="text-sm text-gray-300 font-light px-6 py-4 whitespace-nowrap border-l">
                                 250.5
                               </td>
@@ -236,7 +355,13 @@
             px-5 py-3 w-full font-medium text-left transition-color duration-500
             divide-y collapsed"
             type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-            <span>PM<sub>10</sub> AQI tabela</span>
+            <span *ngIf="getLanguage == 'rs'">
+              PM<sub>10</sub> AQI tabela
+            </span>
+            <span *ngIf="getLanguage == 'en'">
+              <!-- ENGLISH -->
+              PM<sub>10</sub> AQI table
+            </span>
             </button>
           </h2>
           <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
@@ -250,36 +375,75 @@
                             <thead class="border-b">
                               <tr>
                                 <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
-                                    PM<sub>10</sub>
-                                </th>
-                                <th scope="col" colspan="2" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
+                                  <span>
+                                    PM<sub>2.5</sub>
+                                  </span>
+                              </th>
+                              <th scope="col" colspan="2" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
+                                  <span *ngIf="getLanguage == 'rs'">
                                     Koncentracija (μg/m<sup>3</sup>)
-                                </th>
-                                <th scope="col" colspan="2" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
-                                  AQI
-                                </th>
+                                  </span>
+                                  <span *ngIf="getLanguage == 'en'">
+                                    <!-- ENGLISH -->
+                                  </span>
+                              </th>
+                              <th scope="col" colspan="2" class="text-sm font-medium text-gray-900 px-6 py-4 text-center">
+                                AQI
+                              </th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr class="bg-gray-100 border-b">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                  <span *ngIf="getLanguage == 'rs'">
                                     Kvalitet vazduha
+                                  </span>
+                                  <span *ngIf="getLanguage == 'en'">
+                                    <!-- ENGLISH -->
+                                  </span>
                                 </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
-                                  donja<br>granica
+                                  <span *ngIf="getLanguage == 'rs'">
+                                    donja granica
+                                  </span>
+                                  <span *ngIf="getLanguage == 'en'">
+                                    <!-- ENGLISH -->
+                                  </span>
                                 </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
-                                  gornja<br>granica
+                                  <span *ngIf="getLanguage == 'rs'">
+                                    gornja granica
+                                  </span>
+                                  <span *ngIf="getLanguage == 'en'">
+                                    <!-- ENGLISH -->
+                                  </span>
                                 </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
-                                  donja<br>granica
+                                  <span *ngIf="getLanguage == 'rs'">
+                                    donja granica
+                                  </span>
+                                  <span *ngIf="getLanguage == 'en'">
+                                    <!-- ENGLISH -->
+                                  </span>
                                 </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-r">
-                                  gornja<br>granica
+                                  <span *ngIf="getLanguage == 'rs'">
+                                    gornja granica
+                                  </span>
+                                  <span *ngIf="getLanguage == 'en'">
+                                    <!-- ENGLISH -->
+                                  </span>
                                 </td>
                               </tr>
                               <tr class="bg-[#3EBD11] border-b">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dobar</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                  <span *ngIf="getLanguage == 'rs'">
+                                    Dobar
+                                  </span>
+                                  <span *ngIf="getLanguage == 'en'">
+                                    <!-- ENGLISH -->
+                                  </span>
+                                </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
                                   0
                                 </td>
@@ -294,7 +458,14 @@
                                 </td>
                               </tr>
                               <tr class="bg-[#E3DC33] border-b">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Umeren</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                  <span *ngIf="getLanguage == 'rs'">
+                                    Umeren
+                                  </span>
+                                  <span *ngIf="getLanguage == 'en'">
+                                    <!-- ENGLISH -->
+                                  </span>
+                                </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
                                   55
                                 </td>
@@ -309,7 +480,14 @@
                                 </td>
                               </tr>
                               <tr class="bg-[#E08111] border-b">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nezdrav za osetljive grupe</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                  <span *ngIf="getLanguage == 'rs'">
+                                    Nezdrav za osetljive grupe
+                                  </span>
+                                  <span *ngIf="getLanguage == 'en'">
+                                    <!-- ENGLISH -->
+                                  </span>
+                                </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
                                   155
                                 </td>
@@ -324,7 +502,14 @@
                                 </td>
                               </tr>
                               <tr class="bg-[#D10000] border-b">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Nezdrav za sve</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                  <span *ngIf="getLanguage == 'rs'">
+                                    Nezdrav za sve
+                                  </span>
+                                  <span *ngIf="getLanguage == 'en'">
+                                    <!-- ENGLISH -->
+                                  </span>  
+                                </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
                                   255
                                 </td>
@@ -339,7 +524,14 @@
                                 </td>
                               </tr>
                               <tr class="bg-[#761586] border-b">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Vrlo nezdrav</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                                  <span *ngIf="getLanguage == 'rs'">
+                                    Vrlo nezdrav
+                                  </span>
+                                  <span *ngIf="getLanguage == 'en'">
+                                    <!-- ENGLISH -->
+                                  </span>
+                                </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-l">
                                   355
                                 </td>
@@ -354,7 +546,15 @@
                                 </td>
                               </tr>
                               <tr class="bg-[#4e0000] border-b">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300">Opasan</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-300">
+                                  <span *ngIf="getLanguage == 'rs'">
+                                    Opasan
+                                  </span>
+                                  <span *ngIf="getLanguage == 'en'">
+                                    <!-- ENGLISH -->
+                                    Hazardous
+                                  </span>
+                                </td>
                                 <td class="text-sm text-gray-300 font-light px-6 py-4 whitespace-nowrap border-l">
                                   425
                                 </td>
@@ -384,13 +584,19 @@
             px-5 py-3 w-full font-medium text-left transition-color duration-500
             divide-y collapsed rounded-b-xl"
             type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-              <span>Informacije o sajtu</span>
+              <span *ngIf="getLanguage == 'rs'">
+                Informacije o sajtu
+              </span>
+              <span *ngIf="getLanguage == 'en'">
+                <!-- ENGLISH -->
+                Website information
+              </span>
             </button>
           </h2>
           <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body bg-panel-background/10 text-dark-text">
               <div class="p-2 bg-gray-100">
-                <div class="m-3 text-justify">
+                <div *ngIf="getLanguage == 'rs'" class="m-3 text-justify">
                     Za korišćenje veb aplikacije neophodno je da dozvolite pristup lokaciji i kameri sajtu, kao i da vam lokacija bude uključena tokom korišćenja. 
                     Podaci o lokaciji, slike koje filtrirate, niti bilo kakvi lični podaci nigde neće biti sačuvani, već će se koristiti samo za pronalaženje najbližeg senzora vašoj lokaciji i obrađivanje slike. 
                     Podaci o zagađenosti vazduha su preuzeti sa <a class="text-blue-700" href="https://sensor.community/en/">Sensor Community</a> sajta koji mere PM<sub>2.5</sub> i PM<sub>10</sub> čestice, dok su opšti podaci o zagađenosti vazduha 

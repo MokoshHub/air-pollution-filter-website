@@ -30,6 +30,10 @@ export class ImageDisplayComponent implements OnInit {
     });
   }
 
+  get getLanguage() {
+    return AppComponent.language;
+  }
+
   getImageFromService(filename) {
     this.isImageLoading = true;
     this.fileDownloadService.download(filename).subscribe(async data => {

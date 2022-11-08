@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { catchError, Observable, Observer } from 'rxjs';
 import { FileUploadService } from '../services/file-upload.service';
 import { NgxImageCompressService } from 'ngx-image-compress';
-import { MobileCameraComponent } from '../capture-photo/mobile-camera/mobile-camera.component';
+import { AppComponent } from '../app.component';
 import { faWindows } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -25,6 +25,9 @@ export class ImageUploadComponent {
   lat: any;
   isImageLoading: boolean;
 
+  locationErrorRS = "Molimo vas da uključite lokaciju i osvežite stranicu!<br>Ukoliko i dalje ne možete da kliknete dugme SLIKAJ, proverite da li je ovom sajtu dozvoljen pristup lokaciji i kameri.";
+  locationErrorEN = "Please turn on your location and refresh the page!<br>If you are still unable to click the TAKE PHOTO button, check if this website has access to your location and camera.";
+
   constructor(
     private fileUploadService: FileUploadService, 
     private imageCompress: NgxImageCompressService,
@@ -38,12 +41,17 @@ export class ImageUploadComponent {
         this.located = true;
       }, 
       error => {
-        window.alert("Molimo vas da uključite lokaciju i osvežite stranicu!");
-        ImageUploadComponent.message = "Molimo vas da uključite lokaciju i osvežite stranicu!";
+        if (this.getLanguage === 'rs') {
+          window.alert("Molimo vas da uključite lokaciju i osvežite stranicu!");
+          ImageUploadComponent.message = this.locationErrorRS;
+        } else {
+          window.alert("Please turn on your location and refresh the page!");
+          ImageUploadComponent.message = this.locationErrorEN;
+        }
       }
     );
   };
-
+  
   getPosition(): Observable<any> {
     return Observable.create((observer: Observer<GeolocationPosition>) => {
       window.navigator.geolocation.getCurrentPosition(position => {
@@ -66,11 +74,11 @@ export class ImageUploadComponent {
 
         if (this.getImageUrl === undefined)
         {
-          ImageUploadComponent.message = "Nema slike! Ne obrađujemo ništa...";
+          ImageUploadComponent.message = "Nema slike! Ne obrađujemo ništa..."; // these don't really show up on the page
           return;
         }
 
-        ImageUploadComponent.message = "Filtriramo sliku...";
+        ImageUploadComponent.message = "Filtriramo sliku..."; // these don't really show up on the page
         this.uploading = true;
 
         this.filename = this.getRandomString(8);
@@ -93,9 +101,17 @@ export class ImageUploadComponent {
                 this.router.navigate(['image/' + this.filename]);
               }, error => {
                 if (error.status == 418) {
-                  window.alert("Nismo pronašli senzor blizu vaše lokacije!");
+                  if (this.getLanguage === 'rs') {
+                    window.alert("Nismo pronašli senzor blizu vaše lokacije!");
+                  } else {
+                    window.alert("We couldn't find a sensor near your location!");
+                  }
                 } else {
-                  window.alert("Došlo je do greške sa naše strane! Molimo vas da osvežite stranicu i pokušate ponovo!");
+                  if (this.getLanguage === 'rs') {
+                    window.alert("Došlo je do greške sa naše strane! Molimo vas da osvežite stranicu i pokušate ponovo!");
+                  } else {
+                    window.alert("Something went wrong on our side! Please refresh the page and try again!");
+                  }
                 }
                 
                 ImageUploadComponent.message = '';
@@ -117,6 +133,10 @@ export class ImageUploadComponent {
     }
     
     return result;
+  }
+
+  get getLanguage() {
+    return AppComponent.language;
   }
 
   get getMessage() {
