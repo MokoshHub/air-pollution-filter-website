@@ -16,12 +16,12 @@
       <i class="fa fa-info"></i>
     </button>
     
-    <button type="button" (click)="changeLanguage()" class="m-2 w-10 bg-footer text-panel-buttons-gradient-l rounded-full transition-color duration-500">
-      <span *ngIf="getLanguage == 'rs'">
-        EN
+    <button type="button" (click)="changeLanguage()" class="items-center justify-center m-2 w-6 bg-footer text-panel-buttons-gradient-l rounded-full transition-color duration-500">
+      <span class="ml-1" *ngIf="getLanguage == 'rs'">
+        <i class="flag flag-united-kingdom"></i>
       </span>
-      <span *ngIf="getLanguage == 'en'">
-        RS
+      <span class="ml-1" *ngIf="getLanguage == 'en'">
+        <i class="flag flag-serbia"></i>
       </span>
     </button>
 

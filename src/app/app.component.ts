@@ -11,7 +11,7 @@ export class AppComponent {
   // static baseUrl = 'http://127.0.0.1:5000/';
   static baseUrl = 'https://air-pollution-filter-website-fpp3whabmq-lz.a.run.app/';
   static imageType = 'jpeg';
-  static language = 'en';
+  static language = 'rs';
 
   constructor() { }
 
