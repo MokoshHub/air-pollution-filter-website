@@ -614,8 +614,38 @@
           <h2 class="accordion-header" id="flush-headingFive">
             <button class="relative flex items-center bg-gradient-to-r from-panel-buttons-gradient-l via-panel-buttons-gradient-mid to-panel-buttons-gradient-2 text-light-text
             px-5 py-3 w-full font-medium text-left transition-color duration-500
-            divide-y collapsed rounded-b-xl"
+            divide-y collapsed"
             type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+              <span *ngIf="getLanguage == 'rs'">
+                Informacije o postavljaju senzora
+              </span>
+              <span *ngIf="getLanguage == 'en'">
+                <!-- ENGLISH -->
+                Information on sensor placement
+              </span>
+            </button>
+          </h2>
+          <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body bg-panel-background/10 text-dark-text">
+              <div class="p-2 bg-gray-100">
+                <div *ngIf="getLanguage == 'rs'" class="m-3 text-justify">
+                  Ukoliko želite da doprinesete mreži senzora i da dobijate podatke o kvalitetu vazduha u Vašem direktnom okruženju, možete postaviti senzor na svojoj lokaciji. Senzor se postavlja na otvorenom prostoru (dvorište ili terasa) i neophodno je da ima pristup bežičnom internetu.<br>
+                  O tehničkim karakteristikama i komponentama senzora, kao i informacije o naručivanju istih možete pročitati na sajtu <a href="https://sensor.community/en/sensors/airrohr/" target="_blank" class="text-blue-500 hover:text-blue-700">Sensor Community</a>.<br>
+                </div>
+                <div *ngIf="getLanguage == 'en'" class="m-3 text-justify">
+                  In case you would like to contribute to the sensor network and get air quality data for your immediate environment, you can set up a sensor at your location. Sensors are placed in open spaces (courtyard or terrace) and they require a wireless internet connection.<br>
+                  You can find more technical characteristics and a list of sensor components, as well as information on how to order them on the <a href="https://sensor.community/en/sensors/airrohr/" target="_blank" class="text-blue-500 hover:text-blue-700">Sensor Community</a> website.<br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-panel-background/10">
+          <h2 class="accordion-header" id="flush-headingSix">
+            <button class="relative flex items-center bg-gradient-to-r from-panel-buttons-gradient-l via-panel-buttons-gradient-mid to-panel-buttons-gradient-2 text-light-text
+            px-5 py-3 w-full font-medium text-left transition-color duration-500
+            divide-y collapsed rounded-b-xl"
+            type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseFive">
               <span *ngIf="getLanguage == 'rs'">
                 Informacije o sajtu
               </span>
@@ -625,7 +655,7 @@
               </span>
             </button>
           </h2>
-          <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body bg-panel-background/10 text-dark-text">
               <div class="p-2 bg-gray-100">
                 <div *ngIf="getLanguage == 'rs'" class="m-3 text-justify">
