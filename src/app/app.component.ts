@@ -1,9 +1,29 @@
 import { Component } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations: [
+    trigger('panelState', [
+      state('closed', style({
+        height: '0px',
+        overflow: 'hidden',
+        opacity: 0
+      })),
+      state('open', style({
+        height: '*',
+        opacity: 1
+      })),
+      transition('closed => open', [
+        animate('300ms ease-out')
+      ]),
+      transition('open => closed', [
+        animate('300ms ease-in')
+      ])
+    ])
+  ]
 })
 
 export class AppComponent {
@@ -13,17 +33,23 @@ export class AppComponent {
   static imageType = 'jpeg';
   static language = 'rs';
 
+  openPanel: number | null = 1;
+
   constructor() { }
 
   changeLanguage() {
-    if (AppComponent.language === 'rs') {
-      AppComponent.language = 'en';
-    } else {
-      AppComponent.language = 'rs';
-    }
+    AppComponent.language = AppComponent.language === 'rs' ? 'en' : 'rs';
   }
 
   get getLanguage() {
     return AppComponent.language;
+  }
+
+  togglePanel(panelNumber: number) {
+    this.openPanel = this.openPanel === panelNumber ? null : panelNumber;
+  }
+
+  isPanelOpen(panelNumber: number): boolean {
+    return this.openPanel === panelNumber;
   }
 }

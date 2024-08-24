@@ -8,6 +8,7 @@ import { ImageDisplayComponent } from './image-display/image-display.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ImageUploadComponent } from './image-upload/image-upload.component';
 import { CapturePhotoModule } from './capture-photo/capture-photo.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   { path: '', component: ImageUploadComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     ShareButtonsModule,
     ShareIconsModule,
